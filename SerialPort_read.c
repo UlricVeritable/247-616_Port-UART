@@ -67,7 +67,7 @@ void main(void)
 
 	// Setting Time outs 
 	SerialPortSettings.c_cc[VMIN] = 0; // Read at least X character(s) 
-	SerialPortSettings.c_cc[VTIME] = 30; // Wait 3sec (0 for indefinetly) 
+	SerialPortSettings.c_cc[VTIME] = 100; // Wait 3sec (0 for indefinetly) 
 
 	if((tcsetattr(fd, TCSANOW, &SerialPortSettings)) != 0) // Set the attributes to the termios structure
 		printf("\n  Erreur! configuration des attributs du port serie");
